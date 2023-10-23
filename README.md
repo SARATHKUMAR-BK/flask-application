@@ -19,13 +19,13 @@ Frontend and flask:
   * Image: sarsh/flask-application:v2_without_db
 
 Docker compose:
-   Require_file: docker-compose.yml , init.sql
-   init.sql : 
+   * Require_file: docker-compose.yml , init.sql
+   * init.sql : 
       This file contained the table creation when mysql container start. we attaching this file as volumn
-   docker-compose.yml:
+   * docker-compose.yml:
        This file reuse the image sarsh/flask-application:v2_without_db as separete component and mysql as separete componet
        You can change the mysql_password as your wish
-    How to build: docker-compose up -d
+   * How to build: docker-compose up -d
 
 
 Install steps for docker:
