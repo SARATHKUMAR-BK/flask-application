@@ -11,8 +11,6 @@ services:
   flask_app:
     image: sarsh/flask-application:v2_without_db
     container_name: flask-app-container
-    ports:
-      - "5000:5000"
     depends_on:
       - mysql-server
     environment:
@@ -24,3 +22,10 @@ services:
       FLASK_APP: homepage.py
       FLASK_RUN_HOST: 0.0.0.0
       FLASK_DEBUG: true
+  nginx:
+    image: sarsh/flask-application:nginx
+    container_name: nginx
+    depends_on:
+       - flask_app
+    ports:
+       - "8080:8080"
