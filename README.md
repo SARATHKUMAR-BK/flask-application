@@ -35,13 +35,13 @@ Install steps for docker:
    https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 3. After install check wheather it install properly by run below command:
-   docker --version
+   * docker --version
 4. We need to add current user to docker group for accessing docker without sudo
-   sudo usermod -aG docker `whoami`
+   * sudo usermod -aG docker `whoami`
 5. we need to install docker compose as well
-   sudo curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-   sudo chmod +x /usr/local/bin/docker-compose
-   docker-compose --version
+   * sudo curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+   * sudo chmod +x /usr/local/bin/docker-compose
+   * docker-compose --version
 
 
 Run Application:
@@ -50,5 +50,6 @@ Run Application:
    git clone https://github.com/SARATHKUMAR-BK/flask-application.git
    cd flask-application
    docker-compose up
-3. Go to browser and enter : http://<localhost or Public IP>:8080/
-   Note: if you using ec2 instane then we need to open 8080 in inbound
+3. Go to browser and enter : http://<<localhost or Public IP>>:8080/
+   . Note: if you using ec2 instane then we need to open 8080 in inbound
+   
