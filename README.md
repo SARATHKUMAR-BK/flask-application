@@ -5,18 +5,18 @@ we are using flask use server (web framework) and used mysql as database and use
 Artifactory are stored in files directory
 
 Full application:
-  Image: sarsh/flask-application:v1
-  Dockerfile-name: Dockerfile
-  How to run:  docker run -it -d -p 5000:5000 sarsh/flask-application:v1
-  This image integrated with mysql as well.
-  we can tail the container logs and see the output while login and signup
+  * Image: sarsh/flask-application:v1
+  * Dockerfile-name: Dockerfile
+  * How to run:  docker run -it -d -p 5000:5000 sarsh/flask-application:v1
+  * This image integrated with mysql as well.
+  * we can tail the container logs and see the output while login and signup
 
 Frontend and flask:
-   This image contained only flask and frontend artifate
-   This image useful when we work with docker compose
-   This is act as separate component 
-   Dockerfile-name: Flaskapplication
-   Image: sarsh/flask-application:v2_without_db
+  * This image contained only flask and frontend artifate
+  * This image useful when we work with docker compose
+  * This is act as separate component 
+  * Dockerfile-name: Flaskapplication
+  * Image: sarsh/flask-application:v2_without_db
 
 Docker compose:
    Require_file: docker-compose.yml , init.sql
