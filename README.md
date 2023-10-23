@@ -26,3 +26,29 @@ Docker compose:
        This file reuse the image sarsh/flask-application:v2_without_db as separete component and mysql as separete componet
        You can change the mysql_password as your wish
     How to build: docker-compose up -d
+
+
+Install steps for docker:
+
+1. There is multiple way to install docker : https://docs.docker.com/engine/install/ubuntu/
+2. we can install docker using apt repo
+   https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+3. After install check wheather it install properly by run below command:
+   docker --version
+4. We need to add current user to docker group for accessing docker without sudo
+   sudo usermod -aG docker `whoami`
+5. we need to install docker compose as well
+   sudo curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+   sudo chmod +x /usr/local/bin/docker-compose
+   docker-compose --version
+
+
+Run Application:
+1. Once docker and docker compose are installed properly ,then we good to deploy our application
+2. Clone our repo
+   git clone https://github.com/SARATHKUMAR-BK/flask-application.git
+   cd flask-application
+   docker-compose up
+3. Go to browser and enter : http://<localhost or Public IP>:8080/
+   Note: if you using ec2 instane then we need to open 8080 in inbound
