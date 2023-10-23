@@ -50,6 +50,7 @@ Run Application:
    git clone https://github.com/SARATHKUMAR-BK/flask-application.git
    cd flask-application
    docker-compose up
-3. Go to browser and enter : http://<<localhost or Public IP>>:8080/
+3. Go to browser and enter : http://< localhost or Public IP >:8080/
+
    . Note: if you using ec2 instane then we need to open 8080 in inbound
    
